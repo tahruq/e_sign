@@ -22,16 +22,13 @@ TEMPLATE_NAMES = {
 _OPEN = """
 <div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 	max-width:520px;margin:0 auto;color:#1f2937;">
-	<div style="padding:20px 0 16px;border-bottom:1px solid #e5e7eb;">
-		<span style="font-size:17px;font-weight:700;color:#2563eb;">{{ brand }}</span>
-	</div>
 	<div style="padding:24px 0;font-size:14px;line-height:1.65;">
 """
 
 _CLOSE = """
 	</div>
 	<div style="padding:16px 0;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;">
-		This is an automated message from {{ brand }}.
+		This is an automated document signing notification.
 	</div>
 </div>
 """
