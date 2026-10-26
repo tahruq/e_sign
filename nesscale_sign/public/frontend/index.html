@@ -7,9 +7,19 @@
     <meta name="theme-color" content="#0f0f0f" />
     <script>
       // Public signing pages render light; the app is dark. Set before paint.
-      if (location.pathname.startsWith('/sign'))
+      if (/^\/sign(?:\/|$)/.test(location.pathname)) {
         document.documentElement.setAttribute('data-theme', 'light')
+        document.documentElement.setAttribute('data-public-signing', '')
+        document.title = 'Document Signing'
+      }
     </script>
+    <style>
+      /* Keep the header spacing while hiding the public signer brand/logo.
+         Matches the SignPage header in the shipped frontend bundle. */
+      html[data-public-signing] #app header.h-14 > div:first-child {
+        visibility: hidden;
+      }
+    </style>
     <script type="module" crossorigin src="/assets/nesscale_sign/frontend/assets/index-DfxiJPPI.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/nesscale_sign/frontend/assets/index-DPyKeXAw.css">
   </head>
